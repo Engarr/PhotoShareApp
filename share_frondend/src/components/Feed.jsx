@@ -20,7 +20,7 @@ const Feed = () => {
 			});
 		} else {
 			client.fetch(feedQuery).then((data) => {
-				setPins(data); 
+				setPins(data);
 				setLoading(false);
 			});
 		}
@@ -28,6 +28,9 @@ const Feed = () => {
 
 	if (loading)
 		return <Spinner message='We are adding new ideas to your feed!' />;
+
+	if (!pins?.length) return <h2> No pins found in this category </h2>;
+
 	return <div>{pins && <MasonaryLayout pins={pins} />}</div>;
 };
 

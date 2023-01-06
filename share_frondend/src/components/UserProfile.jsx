@@ -118,8 +118,8 @@ function UserProfile() {
 							<MasonaryLayout pins={pins} />
 						</div>
 					) : (
-						<div >
-							<p className='font-bold text-center mt-3 uppercase '>There is no {text} pins</p>
+						<div className='flex justify-center font-bold items center w-full text-xl mt-2'>
+							There is no {text.toLowerCase()} pins
 						</div>
 					)}
 				</div>
